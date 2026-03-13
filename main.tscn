@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://1thdq4p6vci7"]
+
+[ext_resource type="Shader" uid="uid://dy3k0wuxgmccl" path="res://shaders/background.gdshader" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://cup88p4c2skf3" path="res://textures/background.png" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://bwlwrm0da6wpj" path="res://main.gd" id="3_h2yge"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1bvp3"]
+shader = ExtResource("1_0xm2m")
+shader_parameter/current_color = Color(1, 0.57254905, 0.70980394, 1)
+shader_parameter/target_color = Color(0.11764706, 1, 0, 1)
+shader_parameter/spacing = 25.0
+shader_parameter/animation_progress = 0.0
+shader_parameter/dot_size = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_0xm2m"]
+font_size = 128
+
+[node name="TextureRect" type="TextureRect" unique_id=1754535269]
+material = SubResource("ShaderMaterial_1bvp3")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+texture = ExtResource("2_h2yge")
+stretch_mode = 1
+script = ExtResource("3_h2yge")
+background_material = SubResource("ShaderMaterial_1bvp3")
+
+[node name="xiSage" type="Label" parent="." unique_id=123248591]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = -44.0
+offset_right = 99.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "xiSage"
+label_settings = SubResource("LabelSettings_0xm2m")
