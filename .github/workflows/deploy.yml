@@ -4,6 +4,9 @@ on:
     branches:
       - master
 
+permissions:
+  contents: write
+
 env:
   GODOT_VERSION: 4.6.1
 
