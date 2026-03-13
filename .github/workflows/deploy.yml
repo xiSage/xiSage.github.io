@@ -23,6 +23,7 @@ jobs:
       
       - name: Export project to Web
         run: |
+          mkdir export
           godot --verbose --headless --export-release "Web" ./export/index.html
       
       - name: Install rsync
