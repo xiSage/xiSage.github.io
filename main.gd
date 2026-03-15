@@ -31,3 +31,7 @@ func change_background() -> void:
 		background_material.set_shader_parameter("current_color", target_color)
 		_changing_background = false
 	)
+
+
+func _on_github_button_pressed() -> void:
+	OS.shell_open("https://github.com/xiSage")

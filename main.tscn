@@ -3,6 +3,8 @@
 [ext_resource type="Shader" uid="uid://dy3k0wuxgmccl" path="res://shaders/background.gdshader" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://cup88p4c2skf3" path="res://textures/background.png" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://bwlwrm0da6wpj" path="res://main.gd" id="3_h2yge"]
+[ext_resource type="FontFile" uid="uid://bdp3eosgkphfu" path="res://fonts/Monda-VariableFont_wght.ttf" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bu4rs2nds7gja" path="res://github_button.tscn" id="5_lquwl"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1bvp3"]
 shader = ExtResource("1_0xm2m")
@@ -12,8 +14,17 @@ shader_parameter/spacing = 25.0
 shader_parameter/animation_progress = 0.0
 shader_parameter/dot_size = 1.0
 
+[sub_resource type="FontVariation" id="FontVariation_lquwl"]
+base_font = ExtResource("4_1bvp3")
+variation_opentype = {
+2003265652: 700
+}
+
 [sub_resource type="LabelSettings" id="LabelSettings_0xm2m"]
+font = SubResource("FontVariation_lquwl")
 font_size = 128
+
+[sub_resource type="Theme" id="Theme_7mycd"]
 
 [node name="TextureRect" type="TextureRect" unique_id=1754535269]
 material = SubResource("ShaderMaterial_1bvp3")
@@ -28,18 +39,28 @@ stretch_mode = 1
 script = ExtResource("3_h2yge")
 background_material = SubResource("ShaderMaterial_1bvp3")
 
-[node name="xiSage" type="Label" parent="." unique_id=123248591]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=527498849]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -99.0
-offset_top = -44.0
-offset_right = 99.0
-offset_bottom = 44.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "xiSage"
+
+[node name="xiSage" type="Label" parent="VBoxContainer" unique_id=123248591]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Hello, I'm xiSage"
 label_settings = SubResource("LabelSettings_0xm2m")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1326083532]
+layout_mode = 2
+size_flags_vertical = 2
+theme = SubResource("Theme_7mycd")
+
+[node name="GithubButton" parent="VBoxContainer/HBoxContainer" unique_id=1343188378 instance=ExtResource("5_lquwl")]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/GithubButton" to="." method="_on_github_button_pressed"]
