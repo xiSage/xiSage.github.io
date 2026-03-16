@@ -35,3 +35,7 @@ func change_background() -> void:
 
 func _on_github_button_pressed() -> void:
 	OS.shell_open("https://github.com/xiSage")
+
+
+func _on_bilibili_button_pressed() -> void:
+	OS.shell_open("https://space.bilibili.com/33281722")

@@ -1,16 +1,16 @@
-[gd_scene format=3 uid="uid://bu4rs2nds7gja"]
+[gd_scene format=3 uid="uid://cu7ebjg8wlv44"]
 
-[ext_resource type="Script" uid="uid://cq8bxvtfip53f" path="res://github_button.gd" id="1_5cs85"]
-[ext_resource type="Texture2D" uid="uid://c3vmby31gwe67" path="res://textures/GitHub_Invertocat_Black.svg" id="2_wff0h"]
+[ext_resource type="Script" uid="uid://cq8bxvtfip53f" path="res://github_button.gd" id="1_2d3fs"]
+[ext_resource type="Texture2D" uid="uid://co2wvnxoj7one" path="res://textures/bilibili-color.svg" id="2_gj17b"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wff0h"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dhrki"]
 bg_color = Color(1, 1, 1, 0.5176471)
 corner_radius_top_left = 32
 corner_radius_top_right = 32
 corner_radius_bottom_right = 32
 corner_radius_bottom_left = 32
 
-[node name="GithubButton" type="BaseButton" unique_id=1343188378 node_paths=PackedStringArray("content")]
+[node name="BilibiliButton" type="BaseButton" unique_id=1951855991 node_paths=PackedStringArray("content")]
 unique_name_in_owner = false
 process_mode = 0
 process_priority = 0
@@ -45,8 +45,8 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 0.0
 offset_top = 0.0
-offset_right = 128.0
-offset_bottom = 128.0
+offset_right = 40.0
+offset_bottom = 40.0
 grow_horizontal = 1
 grow_vertical = 1
 rotation = 0.0
@@ -90,11 +90,11 @@ button_group = null
 shortcut = null
 shortcut_feedback = true
 shortcut_in_tooltip = true
-script = ExtResource("1_5cs85")
+script = ExtResource("1_2d3fs")
 content = NodePath("Panel")
 metadata/_custom_type_script = "uid://cq8bxvtfip53f"
 
-[node name="Panel" type="Panel" parent="." unique_id=972253031]
+[node name="Panel" type="Panel" parent="." unique_id=263942811]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 1
 anchors_preset = 8
@@ -109,9 +109,9 @@ offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_wff0h")
+theme_override_styles/panel = SubResource("StyleBoxFlat_dhrki")
 
-[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=1030093554]
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=1990304503]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.167
@@ -121,6 +121,6 @@ anchor_bottom = 0.833
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("2_wff0h")
+texture = ExtResource("2_gj17b")
 expand_mode = 1
 stretch_mode = 5

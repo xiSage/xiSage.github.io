@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bwlwrm0da6wpj" path="res://main.gd" id="3_h2yge"]
 [ext_resource type="FontFile" uid="uid://bdp3eosgkphfu" path="res://fonts/Monda-VariableFont_wght.ttf" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bu4rs2nds7gja" path="res://github_button.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://cu7ebjg8wlv44" path="res://bilibili_button.tscn" id="6_7mycd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1bvp3"]
 shader = ExtResource("1_0xm2m")
@@ -56,11 +57,18 @@ label_settings = SubResource("LabelSettings_0xm2m")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1326083532]
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 2
 theme = SubResource("Theme_7mycd")
+theme_override_constants/separation = 64
 
 [node name="GithubButton" parent="VBoxContainer/HBoxContainer" unique_id=1343188378 instance=ExtResource("5_lquwl")]
 layout_mode = 2
-size_flags_horizontal = 6
+size_flags_horizontal = 4
+
+[node name="BilibiliButton" parent="VBoxContainer/HBoxContainer" unique_id=1951855991 instance=ExtResource("6_7mycd")]
+layout_mode = 2
+size_flags_horizontal = 4
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/GithubButton" to="." method="_on_github_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/BilibiliButton" to="." method="_on_bilibili_button_pressed"]
