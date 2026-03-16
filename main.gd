@@ -39,3 +39,7 @@ func _on_github_button_pressed() -> void:
 
 func _on_bilibili_button_pressed() -> void:
 	OS.shell_open("https://space.bilibili.com/33281722")
+
+
+func _on_zhihu_button_pressed() -> void:
+	OS.shell_open("https://www.zhihu.com/people/xisage")

@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://bdp3eosgkphfu" path="res://fonts/Monda-VariableFont_wght.ttf" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bu4rs2nds7gja" path="res://github_button.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://cu7ebjg8wlv44" path="res://bilibili_button.tscn" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://du34346i5cyw7" path="res://zhihu_button.tscn" id="7_272bh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1bvp3"]
 shader = ExtResource("1_0xm2m")
@@ -70,5 +71,9 @@ size_flags_horizontal = 4
 layout_mode = 2
 size_flags_horizontal = 4
 
+[node name="ZhihuButton" parent="VBoxContainer/HBoxContainer" unique_id=1878934655 instance=ExtResource("7_272bh")]
+layout_mode = 2
+
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/GithubButton" to="." method="_on_github_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/BilibiliButton" to="." method="_on_bilibili_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/ZhihuButton" to="." method="_on_zhihu_button_pressed"]
