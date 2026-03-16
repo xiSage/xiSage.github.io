@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://du34346i5cyw7"]
+
+[ext_resource type="PackedScene" uid="uid://onyovb3lsnoe" path="res://scenes/icon_link_buttons/icon_link_button.tscn" id="1_x8vja"]
+[ext_resource type="Texture2D" uid="uid://cspch3qte1in4" path="res://textures/zhihu-logo.svg" id="2_x8vja"]
+
+[node name="IconLinkButton" unique_id=1343188378 instance=ExtResource("1_x8vja")]
+
+[node name="TextureRect" parent="Panel" parent_id_path=PackedInt32Array(972253031) index="0" unique_id=1030093554]
+texture = ExtResource("2_x8vja")

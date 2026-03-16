@@ -4,9 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://cup88p4c2skf3" path="res://textures/background.png" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://bwlwrm0da6wpj" path="res://main.gd" id="3_h2yge"]
 [ext_resource type="FontFile" uid="uid://bdp3eosgkphfu" path="res://fonts/Monda-VariableFont_wght.ttf" id="4_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://bu4rs2nds7gja" path="res://github_button.tscn" id="5_lquwl"]
-[ext_resource type="PackedScene" uid="uid://cu7ebjg8wlv44" path="res://bilibili_button.tscn" id="6_7mycd"]
-[ext_resource type="PackedScene" uid="uid://du34346i5cyw7" path="res://zhihu_button.tscn" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://bu4rs2nds7gja" path="res://scenes/icon_link_buttons/github_button.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://cu7ebjg8wlv44" path="res://scenes/icon_link_buttons/bilibili_button.tscn" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://du34346i5cyw7" path="res://scenes/icon_link_buttons/zhihu_button.tscn" id="7_272bh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1bvp3"]
 shader = ExtResource("1_0xm2m")
