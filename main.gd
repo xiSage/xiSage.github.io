@@ -43,3 +43,7 @@ func _on_bilibili_button_pressed() -> void:
 
 func _on_zhihu_button_pressed() -> void:
 	OS.shell_open("https://www.zhihu.com/people/xisage")
+
+
+func _on_moegirl_pedia_button_pressed() -> void:
+	OS.shell_open("https://zh.moegirl.org.cn/User:饭里扑")

@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bu4rs2nds7gja" path="res://scenes/icon_link_buttons/github_button.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://cu7ebjg8wlv44" path="res://scenes/icon_link_buttons/bilibili_button.tscn" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://du34346i5cyw7" path="res://scenes/icon_link_buttons/zhihu_button.tscn" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://cxsk6k7u41km" path="res://scenes/icon_link_buttons/moegirl_pedia_button.tscn" id="8_5vw27"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1bvp3"]
 shader = ExtResource("1_0xm2m")
@@ -35,10 +36,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-focus_neighbor_left = NodePath("VBoxContainer/HBoxContainer/GithubButton")
-focus_neighbor_top = NodePath("VBoxContainer/HBoxContainer/GithubButton")
-focus_neighbor_right = NodePath("VBoxContainer/HBoxContainer/GithubButton")
-focus_neighbor_bottom = NodePath("VBoxContainer/HBoxContainer/GithubButton")
+focus_neighbor_left = NodePath("Content/HBoxContainer/GithubButton")
+focus_neighbor_top = NodePath("Content/HBoxContainer/GithubButton")
+focus_neighbor_right = NodePath("Content/HBoxContainer/GithubButton")
+focus_neighbor_bottom = NodePath("Content/HBoxContainer/GithubButton")
 focus_mode = 1
 mouse_filter = 0
 texture = ExtResource("2_h2yge")
@@ -46,7 +47,7 @@ stretch_mode = 1
 script = ExtResource("3_h2yge")
 background_material = SubResource("ShaderMaterial_1bvp3")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=527498849]
+[node name="Content" type="VBoxContainer" parent="." unique_id=527498849]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -54,43 +55,49 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="xiSage" type="Label" parent="VBoxContainer" unique_id=123248591]
+[node name="xiSage" type="Label" parent="Content" unique_id=123248591]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 text = "Hello, I'm xiSage"
 label_settings = SubResource("LabelSettings_0xm2m")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1326083532]
+[node name="HBoxContainer" type="HBoxContainer" parent="Content" unique_id=1326083532]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 2
 theme = SubResource("Theme_7mycd")
 theme_override_constants/separation = 64
 
-[node name="GithubButton" parent="VBoxContainer/HBoxContainer" unique_id=1343188378 instance=ExtResource("5_lquwl")]
+[node name="GithubButton" parent="Content/HBoxContainer" unique_id=1343188378 instance=ExtResource("5_lquwl")]
 layout_mode = 2
 size_flags_horizontal = 4
-focus_neighbor_left = NodePath("../ZhihuButton")
+focus_neighbor_left = NodePath("../MoegirlPediaButton")
 focus_neighbor_right = NodePath("../BilibiliButton")
 
-[node name="BilibiliButton" parent="VBoxContainer/HBoxContainer" unique_id=1951855991 instance=ExtResource("6_7mycd")]
+[node name="BilibiliButton" parent="Content/HBoxContainer" unique_id=1951855991 instance=ExtResource("6_7mycd")]
 layout_mode = 2
 size_flags_horizontal = 4
 focus_neighbor_left = NodePath("../GithubButton")
 focus_neighbor_right = NodePath("../ZhihuButton")
 
-[node name="ZhihuButton" parent="VBoxContainer/HBoxContainer" unique_id=1878934655 instance=ExtResource("7_272bh")]
+[node name="ZhihuButton" parent="Content/HBoxContainer" unique_id=1878934655 instance=ExtResource("7_272bh")]
 layout_mode = 2
 focus_neighbor_left = NodePath("../BilibiliButton")
+focus_neighbor_right = NodePath("../MoegirlPediaButton")
+
+[node name="MoegirlPediaButton" parent="Content/HBoxContainer" unique_id=1779550122 instance=ExtResource("8_5vw27")]
+layout_mode = 2
+focus_neighbor_left = NodePath("../ZhihuButton")
 focus_neighbor_right = NodePath("../GithubButton")
 
-[connection signal="mouse_entered" from="VBoxContainer/HBoxContainer/GithubButton" to="VBoxContainer/HBoxContainer/GithubButton" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="VBoxContainer/HBoxContainer/GithubButton" to="VBoxContainer/HBoxContainer/GithubButton" method="_on_mouse_exited"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/GithubButton" to="." method="_on_github_button_pressed"]
-[connection signal="mouse_entered" from="VBoxContainer/HBoxContainer/BilibiliButton" to="VBoxContainer/HBoxContainer/BilibiliButton" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="VBoxContainer/HBoxContainer/BilibiliButton" to="VBoxContainer/HBoxContainer/BilibiliButton" method="_on_mouse_exited"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/BilibiliButton" to="." method="_on_bilibili_button_pressed"]
-[connection signal="mouse_entered" from="VBoxContainer/HBoxContainer/ZhihuButton" to="VBoxContainer/HBoxContainer/ZhihuButton" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="VBoxContainer/HBoxContainer/ZhihuButton" to="VBoxContainer/HBoxContainer/ZhihuButton" method="_on_mouse_exited"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/ZhihuButton" to="." method="_on_zhihu_button_pressed"]
+[connection signal="mouse_entered" from="Content/HBoxContainer/GithubButton" to="Content/HBoxContainer/GithubButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Content/HBoxContainer/GithubButton" to="Content/HBoxContainer/GithubButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="Content/HBoxContainer/GithubButton" to="." method="_on_github_button_pressed"]
+[connection signal="mouse_entered" from="Content/HBoxContainer/BilibiliButton" to="Content/HBoxContainer/BilibiliButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Content/HBoxContainer/BilibiliButton" to="Content/HBoxContainer/BilibiliButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="Content/HBoxContainer/BilibiliButton" to="." method="_on_bilibili_button_pressed"]
+[connection signal="mouse_entered" from="Content/HBoxContainer/ZhihuButton" to="Content/HBoxContainer/ZhihuButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Content/HBoxContainer/ZhihuButton" to="Content/HBoxContainer/ZhihuButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="Content/HBoxContainer/ZhihuButton" to="." method="_on_zhihu_button_pressed"]
+[connection signal="pressed" from="Content/HBoxContainer/MoegirlPediaButton" to="." method="_on_moegirl_pedia_button_pressed"]

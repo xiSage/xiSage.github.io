@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bu4rs2nds7gja"]
 
 [ext_resource type="PackedScene" uid="uid://onyovb3lsnoe" path="res://scenes/icon_link_buttons/icon_link_button.tscn" id="1_wff0h"]
-[ext_resource type="Texture2D" uid="uid://c3vmby31gwe67" path="res://textures/GitHub_Invertocat_Black.svg" id="2_wff0h"]
+[ext_resource type="Texture2D" uid="uid://c3vmby31gwe67" path="res://textures/logos/GitHub_Invertocat_Black.svg" id="2_wff0h"]
 
 [node name="GithubButton" unique_id=1343188378 instance=ExtResource("1_wff0h")]
 
