@@ -11,11 +11,11 @@ func _get_minimum_size() -> Vector2:
 	return Vector2.ZERO
 
 
-func _on_mouse_entered() -> void:
+func _focus() -> void:
 	animation_player.play("hover")
 
 
-func _on_mouse_exited() -> void:
+func _unfocus() -> void:
 	animation_player.play_backwards("hover")
 	
 
