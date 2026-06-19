@@ -8,13 +8,13 @@ permissions:
   contents: write
 
 env:
-  GODOT_VERSION: 4.6.3
+  GODOT_VERSION: 4.7
 
 jobs:
   export-html5:
     runs-on: ubuntu-latest
     container:
-      image: barichello/godot-ci:4.6.3
+      image: barichello/godot-ci:4.7
     steps:
       - name: Checkout
         uses: actions/checkout@v6
